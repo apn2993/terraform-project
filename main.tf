@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "pradeepterra123"
+  bucket = "pradeep299300"
 }
 
 resource "aws_iam_user" "seven" {
