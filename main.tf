@@ -101,11 +101,11 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["sir1", "sir2", "sri3", "sri4"]
+default = ["pra1", "pra2", "pra3", "pra4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "us-east-1a"
+ availability_zone = "ap-south-1a"
   size = 40
   tags = {
     Name = "awsebspra2023"
