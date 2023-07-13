@@ -8,7 +8,7 @@ secret_key = "rRF54MMGdjtwAHX16mCVKkBcJQruY4TeqPFPSa5a"
 resource "aws_instance" "one" {
   ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
-  key_name        = "keypair"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -27,7 +27,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
-  key_name        = "keypair"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
@@ -46,7 +46,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
-  key_name        = "keypair"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -57,7 +57,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
-  key_name        = "keypair"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   tags = {
