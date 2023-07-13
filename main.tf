@@ -1,16 +1,16 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "us-east-1"
-access_key = "AKIA3MMKURQNK5MECFUV"
-secret_key = "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"
+region = "ap-south-1"
+access_key = "AKIA3MMKURQNEWDOOLF7"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "keypair"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "ap-south-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -25,11 +25,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "keypair"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "ap-south-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -44,29 +44,29 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "keypair"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "ap-south-1a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "keypair"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "ap-south-1b"
   tags = {
     Name = "app-server-2"
   }
 }
 
 resource "aws_security_group" "five" {
-  name = "elb-sg8143"
+  name = "awsasgpra2023"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "vamshi123@168143"
+  bucket = "awss3bucketpra2023"
 }
 
 resource "aws_iam_user" "seven" {
@@ -108,6 +108,6 @@ resource "aws_ebs_volume" "eight" {
  availability_zone = "us-east-1a"
   size = 40
   tags = {
-    Name = "awsebs8143"
+    Name = "awsebspra2023"
   }
 }
